@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>catylstrx.com | CatylstRx Waitlist</title>
+  <title>MyPharmacist | Personal Medication Support</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta
     name="description"
-    content="CatylstRx is a pharmacist-developed concept for better medicine help. Join the waitlist for updates."
+    content="MyPharmacist at mypharmacist.care is a pharmacist-led concept focused on giving patients and caregivers consistent, personal medication support."
   />
   <style>
     :root {
       --bg: #f9f7f7;
       --bg-soft: #ffffff;
-      --surface: rgba(249, 247, 247, 0.88);
+      --surface: rgba(255, 255, 255, 0.78);
       --surface-strong: #ffffff;
       --text: #112d4e;
       --muted: #4e6d8e;
       --line: rgba(17, 45, 78, 0.12);
       --accent: #3f72af;
       --accent-deep: #112d4e;
-      --shadow: 0 24px 60px rgba(17, 45, 78, 0.10);
+      --shadow: 0 24px 60px rgba(17, 45, 78, 0.1);
       --radius: 20px;
     }
 
@@ -38,15 +38,10 @@
       font-family: Georgia, "Times New Roman", serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(63, 114, 175, 0.10), transparent 30%),
+        radial-gradient(circle at top left, rgba(63, 114, 175, 0.1), transparent 30%),
         radial-gradient(circle at bottom right, rgba(17, 45, 78, 0.06), transparent 28%),
         linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
       line-height: 1.5;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     .page {
@@ -57,30 +52,44 @@
     }
 
     .shell {
-      width: min(100%, 720px);
+      width: min(100%, 760px);
       margin: 0 auto;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
 
-    /* ── Top bar ─────────────────────────── */
     .topbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
       padding: 10px 0 36px;
     }
 
     .wordmark {
-      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
-      letter-spacing: 0.18em;
-      text-transform: lowercase;
+      font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+      letter-spacing: 0.08em;
+      text-transform: none;
+    }
+
+    .brand-lockup {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .wordmark span {
       color: var(--accent);
       font-style: italic;
+    }
+
+    .domain {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
     }
 
     .badge {
@@ -93,11 +102,11 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       background: rgba(255, 255, 255, 0.4);
+      white-space: nowrap;
     }
 
-    /* ── Hero ────────────────────────────── */
     .hero {
-      padding: 12px 0 40px;
+      padding: 12px 0 34px;
     }
 
     .eyebrow {
@@ -112,7 +121,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-size: clamp(2.5rem, 6vw, 4.1rem);
       line-height: 1.05;
       font-weight: 600;
       letter-spacing: -0.03em;
@@ -121,8 +130,8 @@
 
     .tagline {
       margin: 20px 0 0;
-      max-width: 52ch;
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      max-width: 55ch;
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -136,20 +145,41 @@
       letter-spacing: 0.01em;
     }
 
-    .info-section {
+    .feature-strip {
+      display: grid;
+      gap: 16px;
       padding: 0 0 36px;
+    }
+
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section-label {
+      margin: 0 0 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     .section-title {
       margin: 0 0 12px;
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-size: clamp(1.45rem, 3vw, 1.95rem);
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
 
     .section-copy {
       margin: 0;
-      max-width: 56ch;
+      max-width: 58ch;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.98rem;
@@ -161,105 +191,22 @@
       padding: 0;
       display: grid;
       gap: 14px;
-      max-width: 58ch;
+      max-width: 60ch;
     }
 
     .explore-list li {
-      padding: 12px 14px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.68);
       color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
     }
 
-    /* ── MedCal tool section ─────────────── */
-    .tools-section {
-      padding: 0 0 40px;
-    }
-
-    .section-label {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 14px;
-    }
-
-    .tool-card {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      background: var(--surface-strong);
-      border: 1px solid rgba(63, 114, 175, 0.25);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px 32px;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .tool-card:hover {
-      box-shadow: 0 28px 70px rgba(17, 45, 78, 0.14);
-    }
-
-    .tool-icon {
-      flex-shrink: 0;
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, #3f72af, #112d4e);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-
-    .tool-body {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .tool-name {
-      margin: 0 0 6px;
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .tool-desc {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-      max-width: 48ch;
-    }
-
-    .tool-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 11px 22px;
-      background: var(--accent);
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      border-radius: 999px;
-      transition: background 0.2s ease, transform 0.15s ease;
-    }
-
-    .tool-cta:hover {
-      background: var(--accent-deep);
-      transform: translateY(-1px);
-    }
-
-    /* ── Notify section ──────────────────── */
     .notify-section {
       padding: 32px 0 12px;
-      border-top: 1px solid rgba(17, 45, 78, 0.10);
+      border-top: 1px solid rgba(17, 45, 78, 0.1);
     }
 
     .notify-label {
@@ -277,7 +224,6 @@
       font-size: 0.95rem;
     }
 
-    /* ── Footer ──────────────────────────── */
     .footer {
       display: flex;
       justify-content: space-between;
@@ -286,116 +232,82 @@
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.88rem;
-    }
-
-    .footer a {
-      text-decoration: underline;
-      text-decoration-color: rgba(63, 114, 175, 0.4);
-      text-underline-offset: 0.16em;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 580px) {
-      .page { padding: 18px; }
-
-      .tool-card {
-        flex-direction: column;
-        gap: 16px;
-        padding: 22px;
+      .page {
+        padding: 18px;
       }
 
-      .notify-form {
+      .topbar {
+        padding-bottom: 28px;
+        align-items: flex-start;
         flex-direction: column;
       }
-
-      input[type="email"] {
-        min-width: 0;
-        width: 100%;
-      }
-
-      button { width: 100%; }
-
-      .topbar { padding-bottom: 28px; }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <div class="shell">
-
       <header class="topbar">
-        <div class="wordmark">catylst<span>rx</span>.com</div>
-        <div class="badge">In Development</div>
+        <div class="brand-lockup">
+          <div class="wordmark">My<span>Pharmacist</span></div>
+          <div class="domain">mypharmacist.care</div>
+        </div>
+        <div class="badge">Founding Waitlist</div>
       </header>
 
       <main>
-
         <section class="hero" aria-labelledby="hero-title">
-          <p class="eyebrow">DESIGNED BY A PHARMACIST<br />INSPIRED BY PATIENTS AND CAREGIVERS</p>
-          <h1 id="hero-title">Your own personal pharmacist.</h1>
+          <p class="eyebrow">MYPHARMACIST.CARE</p>
+          <h1 id="hero-title">Personal medication support for patients and caregivers.</h1>
           <p class="tagline">
-            CatylstRx is exploring a new model where each person or family can have one pharmacist assigned to them, someone who knows their medicines and helps them manage them over time.
+            MyPharmacist is built around a simple idea: medication help should feel personal. Instead of starting over with someone new each time, patients and families should be able to rely on one pharmacist who understands their medication story over time.
           </p>
-          <p class="credibility-note">A pharmacist-developed concept focused on better medicine help for patients and caregivers.</p>
+          <p class="credibility-note">A pharmacist-led concept for more consistent medication guidance, coordination, and follow-through.</p>
           <p class="tagline">
-            Instead of speaking to a different pharmacist each time you call the pharmacy, imagine having one pharmacist who is your consistent point of contact.
-          </p>
-          <p class="tagline">
-            Someone who answers questions, helps coordinate refills, manages changes from doctors, connects you to adherence services, helps with insurance and Medicare drug coverage, and looks for ways to lower prescription costs. For caregivers, it means one person to call when something changes.
+            At mypharmacist.care, the vision is practical: help with questions, refill friction, medication changes, affordability issues, and the day-to-day complexity that often lands on patients or caregivers.
           </p>
         </section>
 
-        <section class="info-section" aria-labelledby="exploring-title">
-          <p class="section-label">What this model could provide</p>
-          <h2 class="section-title" id="exploring-title">One pharmacist who stays with you over time.</h2>
-          <ul class="explore-list">
-            <li><strong>A dedicated pharmacist</strong><br />One pharmacist who knows your medicines and follows your care over time.</li>
-            <li><strong>Help managing complex medicine routines</strong><br />Support when doses change, new medicines are added, or side effects appear.</li>
-            <li><strong>Insurance and cost navigation</strong><br />Help understanding Medicare drug plans, prior authorizations, and savings options.</li>
-            <li><strong>Support for caregivers</strong><br />A single point of contact for families helping manage medicines for parents or loved ones.</li>
-          </ul>
-        </section>
+        <section class="feature-strip" aria-labelledby="support-title">
+          <div class="feature-card">
+            <p class="section-label">What MyPharmacist is meant to be</p>
+            <h2 class="section-title" id="support-title">One reliable point of contact for medication questions, changes, and next steps.</h2>
+            <ul class="explore-list">
+              <li><strong>Dedicated pharmacist relationship</strong><br />One pharmacist who learns your medications, your questions, and the context behind your care.</li>
+              <li><strong>Medication change support</strong><br />Help when therapies are started, stopped, adjusted, delayed, or suddenly become confusing.</li>
+              <li><strong>Cost and coverage navigation</strong><br />Support with Medicare drug plans, prior authorizations, affordability barriers, and savings options.</li>
+              <li><strong>Caregiver-friendly communication</strong><br />A clearer line of support for adult children, spouses, and others helping manage medications for loved ones.</li>
+            </ul>
+          </div>
 
-        <section class="info-section" aria-labelledby="why-title">
-          <p class="section-label">Why this exists</p>
-          <h2 class="section-title" id="why-title">Many medicine problems happen when no one person is helping manage them.</h2>
-          <p class="section-copy">
-            Many medication problems happen because people do not have one person responsible for helping them manage their medicines. CatylstRx is exploring a model where a personal pharmacist fills that role.
-          </p>
-        </section>
-
-        <section class="tools-section" aria-labelledby="tools-label">
-          <p class="section-label" id="tools-label">A free side tool</p>
-
-          <div class="tool-card">
-            <div class="tool-icon" aria-hidden="true">&#128138;</div>
-            <div class="tool-body">
-              <h2 class="tool-name">Medicine Taper Calendar</h2>
-              <p class="tool-desc">
-                This small taper calendar tool was built while the broader CatylstRx idea was taking shape. It is a free side tool, not the main service.
-              </p>
-              <a class="tool-cta" href="taper-calendar.html">Open taper calendar &rarr;</a>
-            </div>
+          <div class="feature-card">
+            <p class="section-label">Why this matters</p>
+            <h2 class="section-title">Medication problems grow when no one is clearly helping connect the dots.</h2>
+            <p class="section-copy">
+              MyPharmacist exists to explore a better model: one where medication support is longitudinal, easier to reach, and grounded in the real needs of patients and caregivers rather than brief, disconnected interactions.
+            </p>
           </div>
         </section>
 
         <section class="notify-section" aria-labelledby="notify-label">
-          <p class="notify-label" id="notify-label">Leave your email if you'd like updates as this concept develops.</p>
+          <p class="notify-label" id="notify-label">Leave your email if you want updates as MyPharmacist develops.</p>
           <p class="notify-copy">
-            If this idea feels useful, leave your information for updates, future tools, and early access. This is a simple way to show interest while CatylstRx is still being built.
+            Join the waitlist for updates, early access, and future tools as MyPharmacist and mypharmacist.care continue to take shape.
           </p>
-          <iframe data-tally-src="https://tally.so/embed/aQxLWB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="632" frameborder="0" marginheight="0" marginwidth="0" title="null"></iframe>
+          <iframe data-tally-src="https://tally.so/embed/aQxLWB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="632" frameborder="0" marginheight="0" marginwidth="0" title="MyPharmacist updates"></iframe>
           <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
         </section>
-
       </main>
 
       <footer class="footer">
-        <div>&copy; 2026 catylstrx.com</div>
-        <a href="mailto:admin@catylstrx.com">admin@catylstrx.com</a>
+        <div>&copy; 2026 MyPharmacist</div>
+        <div>mypharmacist.care</div>
       </footer>
-
     </div>
   </div>
-
 </body>
 </html>
