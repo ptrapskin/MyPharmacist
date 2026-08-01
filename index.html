@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyPharmacist | Personal Medication Support</title>
+  <title>MyPharmacist | Resources & Tools</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9S7F4DKFB"></script>
@@ -15,7 +15,7 @@
   </script>
   <meta
     name="description"
-    content="MyPharmacist at mypharmacist.care is a pharmacist-led concept focused on giving patients and caregivers consistent, personal medication support."
+    content="MyPharmacist at mypharmacist.care is a collection of pharmacist-built tools and resources for patients and caregivers that are hard to find anywhere else."
   />
   <style>
     :root {
@@ -100,147 +100,125 @@
       text-transform: lowercase;
     }
 
-    .badge {
-      padding: 7px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: rgba(255, 255, 255, 0.4);
-      white-space: nowrap;
-    }
-
     .hero {
-      padding: 12px 0 34px;
-    }
-
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--accent);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      padding: 4px 0 28px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 28px;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2.5rem, 6vw, 4.1rem);
-      line-height: 1.05;
+      font-size: clamp(1.5rem, 3vw, 1.85rem);
+      line-height: 1.2;
       font-weight: 600;
-      letter-spacing: -0.03em;
-      text-wrap: balance;
+      letter-spacing: -0.02em;
     }
 
     .tagline {
-      margin: 20px 0 0;
-      max-width: 55ch;
-      font-size: clamp(1rem, 1.8vw, 1.18rem);
+      margin: 8px 0 0;
+      max-width: 60ch;
+      font-size: 0.95rem;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .credibility-note {
-      margin: 18px 0 0;
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-
-    .feature-strip {
+    .tool-grid {
       display: grid;
       gap: 16px;
       padding: 0 0 36px;
     }
 
-    .feature-card {
+    .tool-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 24px;
       backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .section-label {
-      margin: 0 0 12px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .section-title {
-      margin: 0 0 12px;
-      font-size: clamp(1.45rem, 3vw, 1.95rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .section-copy {
+    .tool-name {
       margin: 0;
+      font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+      letter-spacing: -0.01em;
+    }
+
+    .tool-copy {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.96rem;
       max-width: 58ch;
-      color: var(--muted);
+    }
+
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      color: var(--accent-deep);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.98rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      align-self: flex-start;
+      padding-bottom: 1px;
     }
 
-    .explore-list {
-      list-style: none;
-      margin: 18px 0 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
-      max-width: 60ch;
-    }
-
-    .explore-list li {
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.68);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-    }
-
-    .notify-section {
-      padding: 32px 0 12px;
-      border-top: 1px solid rgba(17, 45, 78, 0.1);
-    }
-
-    .notify-label {
-      margin: 0 0 14px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .notify-copy {
-      margin: 0 0 18px;
-      max-width: 54ch;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
+    .tool-link:hover {
+      color: var(--accent);
     }
 
     .footer {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       gap: 16px;
+      align-items: end;
       padding: 28px 0 6px;
-      color: var(--muted);
+      border-top: 1px solid var(--line);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.88rem;
+    }
+
+    .footer-brand {
+      color: var(--text);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
       flex-wrap: wrap;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .footer-email {
+      font-size: 0.84rem;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+
+    .footer a {
+      text-decoration: underline;
+      text-decoration-color: rgba(63, 114, 175, 0.4);
+      text-underline-offset: 0.16em;
+      color: inherit;
+    }
+
+    @media (max-width: 860px) {
+      .footer {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .footer-nav {
+        justify-content: flex-start;
+      }
     }
 
     @media (max-width: 580px) {
@@ -264,56 +242,60 @@
           <div class="wordmark">My<span>Pharmacist</span></div>
           <div class="domain">mypharmacist.care</div>
         </div>
-        <div class="badge">Founding Waitlist</div>
       </header>
 
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <p class="eyebrow">MYPHARMACIST.CARE</p>
-          <h1 id="hero-title">Personal medication support for patients and caregivers.</h1>
-          <p class="tagline">
-            MyPharmacist is built around a simple idea: medication help should feel personal. Instead of starting over with someone new each time, patients and families should be able to rely on one pharmacist who understands their medication story over time.
-          </p>
-          <p class="credibility-note">A pharmacist-led concept for more consistent medication guidance, coordination, and follow-through.</p>
-          <p class="tagline">
-            At mypharmacist.care, the vision is practical: help with questions, refill friction, medication changes, affordability issues, and the day-to-day complexity that often lands on patients or caregivers.
-          </p>
+          <h1 id="hero-title">Tools & resources</h1>
+          <p class="tagline">Built by a pharmacist, for patients and caregivers.</p>
         </section>
 
-        <section class="feature-strip" aria-labelledby="support-title">
-          <div class="feature-card">
-            <p class="section-label">What MyPharmacist is meant to be</p>
-            <h2 class="section-title" id="support-title">One reliable point of contact for medication questions, changes, and next steps.</h2>
-            <ul class="explore-list">
-              <li><strong>Dedicated pharmacist relationship</strong><br />One pharmacist who learns your medications, your questions, and the context behind your care.</li>
-              <li><strong>Medication change support</strong><br />Help when therapies are started, stopped, adjusted, delayed, or suddenly become confusing.</li>
-              <li><strong>Cost and coverage navigation</strong><br />Support with Medicare drug plans, prior authorizations, affordability barriers, and savings options.</li>
-              <li><strong>Caregiver-friendly communication</strong><br />A clearer line of support for adult children, spouses, and others helping manage medications for loved ones.</li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <p class="section-label">Why this matters</p>
-            <h2 class="section-title">Medication problems grow when no one is clearly helping connect the dots.</h2>
-            <p class="section-copy">
-              MyPharmacist exists to explore a better model: one where medication support is longitudinal, easier to reach, and grounded in the real needs of patients and caregivers rather than brief, disconnected interactions.
+        <section class="tool-grid" aria-label="Tools">
+          <div class="tool-card">
+            <h3 class="tool-name">Taper Calendar</h3>
+            <p class="tool-copy">
+              A clear, printable calendar for medications that need to be tapered up or down over time, so the schedule is easy to follow at home.
             </p>
+            <a class="tool-link" href="https://www.catylstrx.com/taper-calendar.html" target="_blank" rel="noopener">Open the Taper Calendar &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <h3 class="tool-name">Drug Repository Site Finder</h3>
+            <p class="tool-copy">
+              Find nearby pharmacies and medical facilities participating in the Wisconsin Drug Repository Program, which helps unused medication reach patients who need it.
+            </p>
+            <a class="tool-link" href="https://tools.catylstrx.com/donate-meds" target="_blank" rel="noopener">Find a donation site &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <h3 class="tool-name">Drug Repository Donation Record</h3>
+            <p class="tool-copy">
+              Fill out the Wisconsin Drug Repository Program donation record (Form F-62645B) online by scanning each item's barcode, no paper form needed.
+            </p>
+            <a class="tool-link" href="https://tools.catylstrx.com/drug-donation-record" target="_blank" rel="noopener">Open the Donation Record tool &rarr;</a>
+          </div>
+
+          <div class="tool-card">
+            <h3 class="tool-name">Medicine &amp; Sharps Disposal Guide</h3>
+            <p class="tool-copy">
+              Where to safely get rid of medicines, needles, and medical equipment you can no longer use, with Dane County resources front and center.
+            </p>
+            <a class="tool-link" href="https://tools.catylstrx.com/dispose-meds" target="_blank" rel="noopener">Open the Disposal Guide &rarr;</a>
           </div>
         </section>
 
-        <section class="notify-section" aria-labelledby="notify-label">
-          <p class="notify-label" id="notify-label">Leave your email if you want updates as MyPharmacist develops.</p>
-          <p class="notify-copy">
-            Join the waitlist for updates, early access, and future tools as MyPharmacist and mypharmacist.care continue to take shape.
-          </p>
-          <iframe data-tally-src="https://tally.so/embed/aQxLWB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="632" frameborder="0" marginheight="0" marginwidth="0" title="MyPharmacist updates"></iframe>
-          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-        </section>
       </main>
 
       <footer class="footer">
-        <div>&copy; 2026 MyPharmacist</div>
-        <div>mypharmacist.care</div>
+        <div class="footer-brand">&copy; 2026 MyPharmacist</div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="/about">About</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="mailto:admin@catylstrx.com">Contact</a>
+        </nav>
+        <a class="footer-email" href="mailto:admin@catylstrx.com">admin@catylstrx.com</a>
       </footer>
     </div>
   </div>
